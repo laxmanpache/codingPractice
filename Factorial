@@ -1,0 +1,30 @@
+//Tabular Method
+// Time Complexity O(n)
+// Space complexity O(1)
+// let previous1=0;
+// let previous=1;
+
+// let n=5;
+// for(let i=2;i<=n;i++){
+//     let crurrent=previous+previous1;
+//     previous1=previous;
+//     previous=crurrent;
+// }
+// console.log(previous1)
+
+
+
+//Resursive Method with memoization
+// timecompexity O(n)
+// Space Complexity O(n)+O(n)
+let n=5;
+let arr=new Array(n+1).fill(-1)
+function f(n,arr){
+    if(n<=1)
+     return n;
+    if(arr[n]!= -1)
+        return arr[n]
+    return arr[n]=f(n-1,arr)+f(n-2 ,arr)
+  
+}
+console.log(f(5 ,arr))
