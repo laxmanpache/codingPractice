@@ -11,11 +11,12 @@ const SelectionSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     lowest = i;
     for (let j = i + 1; j < arr.length; j++) {
-    //   console.log({ lowest, j });
-      if(arr[j]<arr[lowest]  && arr[lowest]!==arr[j]){
-        [arr[j],arr[lowest]]=[arr[lowest],arr[j]]
+      //   console.log({ lowest, j });
+      if (arr[j] < arr[lowest]) {
+        lowest = j;
       }
     }
+    if (lowest !== i) [arr[i], arr[lowest]] = [arr[lowest], arr[i]];
   }
   return arr;
 };
