@@ -1,1 +1,4 @@
 # codingPractice
+
+
+Data str
